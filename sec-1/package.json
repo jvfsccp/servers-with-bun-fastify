@@ -1,0 +1,13 @@
+{
+  "name": "sec-1",
+  "module": "index.ts",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module"
+}
