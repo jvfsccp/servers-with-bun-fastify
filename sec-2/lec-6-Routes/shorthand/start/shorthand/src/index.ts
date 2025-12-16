@@ -6,19 +6,19 @@ server.get("/", async (req, rep) => {
   return "hello world"
 })
 
-// server.get<{
-//   Headers: {myheader: number}
-//   Querystring: { id: number}
-//   Reply: {
-//     200: { status: string },
-//     500: { code: number }
-//   }
-// }>("/employee", async (req, rep) => {
-//   // return req.headers.myheader
-//   // return `you passed ${req.query.id}`
+server.get<{
+  Headers: {myheader: number}
+  Querystring: { id: number}
+  Reply: {
+    200: { status: string },
+    500: { code: number }
+  }
+}>("/employee", async (req, rep) => {
+  // return req.headers.myheader
+  // return `you passed ${req.query.id}`
 
-//   return rep.status(200).send({ status: "success" })
-// })
+  return rep.status(200).send({ status: "success" })
+})
 
 server.post<{
   Body: { userName: string}
